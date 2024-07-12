@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Card</title>
+    <style>
+        body {
+            background: url('https://img.freepik.com/free-vector/colorful-gradient-background-modern-design_361591-4582.jpg?t=st=1720797349~exp=1720800949~hmac=135bf805d443e32896dcd07ce9dc14a385903729caa2bfeb351cd92d83370b68&w=360');
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .congratulation-card {
+            opacity: 0;
+            background: url('https://img.freepik.com/free-vector/colorful-gradient-background-modern-design_361591-4582.jpg?t=st=1720797349~exp=1720800949~hmac=135bf805d443e32896dcd07ce9dc14a385903729caa2bfeb351cd92d83370b68&w=360');
+            border: 2px solid #8a2be2;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 50%;
+            animation: fadeIn 2s ease-in-out;
+            box-shadow: 10px 10px 0px rgb(255, 255, 255)
+            , -10px -10px 0px rgb(255, 255, 255); 
+            transition: opacity 2s ease-in-out;
+        }
+
+        .congratulation-card h2 {
+            color: #4b0082;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .congratulation-card pre {
+            color: #000;
+            font-size: 1.2em;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .congratulation-card img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+            border: 5px solid #fff; 
+        }
+
+        button {
+            background-color: #4b0082;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #8a2be2;
+        }
+    </style>
+    <script>
+        function showCard() {
+            const card = document.querySelector('.congratulation-card');
+            card.style.opacity = '1';
+            document.querySelector('button').style.display = 'none';
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="showCard()">Open Greeting</button>
+    <div class="congratulation-card">
+        <img src="https://thumbs.dreamstime.com/b/portrait-happy-charismatic-business-leader-startup-founder-company-ceo-manager-handsome-young-businessman-looking-camera-207836198.jpg"
+            alt="Student Photo">
+        <h2><span style="color: rgb(0, 119, 30);">Congratulations,</span> <span style="color:rgb(77, 0, 77)">Akash Jadhav</span>
+        </h2>
+        <pre>
+            Congratulations on completing the Full Stack Developer course! 
+            That's a fantastic achievement. 
+            Your dedication, sense of humor, 
+            and teamwork skills must have made a big difference. 
+            How do you plan to use your new skills?
+        </pre>
+        <div class="footer">
+
+        </div>
+    </div>
+</body>
+
+</html>
